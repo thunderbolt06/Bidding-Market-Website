@@ -1,0 +1,46 @@
+<div class="container">
+    <h6> Suggest us a video that you think will help farmers </h6>
+
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="go ahead and paste a url" >
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-warning" > submit </button>
+        </div>
+    </div>
+
+
+    <br>
+    <div *ngFor="let ylink of ylinks" >
+        <div class="row">
+            <div class="col-md-7">
+                                                    <youtube-player
+                                    videoId={{ylink.link}}
+                                    suggestedQuality="hlarge"
+                                    [height]="300"
+                                    [width]="580"
+                                    [startSeconds]="43"
+                                    [endSeconds]="60">
+                                    </youtube-player>
+            </div>
+            <div class="col-md-5">
+                <h3>
+                    {{ylink.title}}
+                </h3>
+                <p>
+                    FPO is Farmer Producer Organization where different farmers can come and join as stakeholders in order to get a good business, government subsibies and loans etc. If you are a part of an FPO the you can join us on Our website and get your business widen. You can access information regarding latest market trends and sell your products with us.   </p>
+                <div>
+                    <h5>
+                        Was this helpful?
+                    </h5>
+                    <div>
+                        <button class="btn btn-primary mr-3"> Yes </button>
+                        <button class="btn btn-danger "> No </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

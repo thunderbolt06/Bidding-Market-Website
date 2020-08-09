@@ -1,0 +1,38 @@
+<div>
+
+    <div>
+        <h6> Ask a query. </h6>
+        <div class="row">
+            <div class="col-md-4">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="questions here.."></textarea>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-warning" >Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let q of queries;let idx = index">
+        <div class="single">
+            <div class="question" (click)="openquestion(idx)">
+                <h5> {{q.question}} </h5>
+            </div>
+            <div class="answer" *ngIf="q.open">
+                <p>
+              FPO's are Farmer Producer Organisaton where different farmers can come and join as stakeholders in order to get a good business, government subsibies and loans etc.  </p>
+                <p>If you are a part of an FPO the you can join us on Our website and get your business widen. You can access information regarding latest market trends and sell your products with us.  </p>
+                <br>
+                <div>
+                    <h5>
+                        Was this helpful?
+                    </h5>
+                    <div>
+                        <button class="btn btn-primary mr-3"> Yes </button>
+                        <button class="btn btn-danger "> No </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
